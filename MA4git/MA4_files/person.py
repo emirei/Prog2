@@ -21,7 +21,7 @@ class Person(object):
 		lib.Person_setAge(self.obj, age)
 
 	def getDecades(self):
-		return lib.Person_getDecades(self.obj)
+		return lib.Person_getDecades(double(self.obj))
         
 	def __del__(self):
 		return lib.Person_delete(self.obj)
