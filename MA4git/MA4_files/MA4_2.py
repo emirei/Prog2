@@ -22,6 +22,7 @@ def main():
 	print(f.getAge())
 	print(f.getDecades())
 
+
 	timeLst = []
 	for i in range(20, 40):
 		start = perf_counter()
@@ -51,3 +52,7 @@ def main():
 
 if __name__ == '__main__':
 	main()
+
+
+#Value for fib_numba = 2971215073
+#Value for f.fib = -547084288
