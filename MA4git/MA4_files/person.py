@@ -11,6 +11,8 @@ class Person(object):
 		lib.Person_setAge.argtypes = [ctypes.c_void_p,ctypes.c_int]
 		lib.Person_getDecades.argtypes = [ctypes.c_void_p]
 		lib.Person_getDecades.restype = ctypes.c_double
+		lib.Person_fib.argtypes = [ctypes.c_int]
+		lib.Person_fib.restype = ctypes.c_int
 		lib.Person_delete.argtypes = [ctypes.c_void_p]
 		self.obj = lib.Person_new(age)
 
@@ -25,3 +27,8 @@ class Person(object):
         
 	def __del__(self):
 		return lib.Person_delete(self.obj)
+
+	def fib(self, age):
+		return lib.Person_fib(self.obj)
+
+	
