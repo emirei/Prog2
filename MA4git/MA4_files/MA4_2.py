@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+#Redovisat för Viktor Lindström 21/05/2024
 
 from person import Person
 from numba import njit
