@@ -46,13 +46,13 @@ def main():
 		end = perf_counter()
 		timeLst.append(end-start)
 	plt.plot([ii for ii in range(20,40)], timeLst)
-	plt.savefig(f'Time for each type of calculation plotted.png')
 	plt.legend(["fib_py", "fib_numba", "f.fib"])
+	plt.savefig(f'Time for each type of calculation plotted.png')
 	plt.show()
 
 if __name__ == '__main__':
 	main()
 
 
-#Value for fib_numba = 2971215073
-#Value for f.fib = -547084288
+#Value for fib_numba 47 = 2971215073
+#Value for f.fib 47 = -547084288
