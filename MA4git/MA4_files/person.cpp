@@ -7,9 +7,10 @@ class Person{
 		int getAge();
 		void setAge(int);
 		double getDecades();
-		int fib(int);
+		int fib();
 	private:
 		int age;
+		int _fib(int);
 	};
  
 Person::Person(int a){
@@ -28,13 +29,19 @@ double Person::getDecades(){
 	return age/10.0;
 	}
 
-int Person::fib(int a){
+int Person::fib(){
+	return _fib(age);
+}
+
+int Person::_fib(int a){
 	if (a <= 1) {
 		return a;
 	} else {
-		return (fib(a-1) + fib(a-2));
+		return (_fib(a-1) + _fib(a-2));
 	}
 	}
+
+
 
 
 extern "C"{
@@ -42,7 +49,7 @@ extern "C"{
 	int Person_getAge(Person* person) {return person->getAge();}
 	void Person_setAge(Person* person, int a) {person->setAge(a);}
 	double Person_getDecades(Person* person) {return person->getDecades();}
-	int Person_fib(Person* person, int a) {return person->fib(a);}
+	int Person_fib(Person* person) {return person->fib();}
 	void Person_delete(Person* person){
 		if (person){
 			delete person;

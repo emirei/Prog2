@@ -42,7 +42,8 @@ def main():
 	timeLst = []
 	for i in range(20, 40):
 		start = perf_counter()
-		f.fib(i)
+		f = Person(i)
+		f.fib()
 		end = perf_counter()
 		timeLst.append(end-start)
 	plt.plot([ii for ii in range(20,40)], timeLst)
