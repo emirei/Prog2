@@ -1,5 +1,6 @@
 #include <cstdlib>
-// Person class 
+// Person class
+//Redovisat för Viktor Lindström 21/05/2024
 
 class Person{
 	public:
